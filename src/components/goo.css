@@ -1,0 +1,44 @@
+.hooks-main > svg {
+  display: none;
+}
+
+.hooks-main > div {
+  position: absolute;
+  will-change: transform;
+  border-radius: 50%;
+  background: rgb(57, 216, 197);
+  box-shadow: 5px 5px 2px 0px rgba(0, 0, 0, 0.5);
+  opacity: 0.5;
+  transition: opacity 1s ease-out;
+}
+
+.hooks-main > div:nth-child(1) {
+  width: 25px;
+  height: 25px;
+}
+
+.hooks-main > div:nth-child(2) {
+  width: 40px;
+  height: 40px;
+}
+
+.hooks-main > div:nth-child(3) {
+  width: 35px;
+  height: 35px;
+}
+
+.hooks-main {
+  pointer-events: none;
+  top: 0;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  filter: url("#goo");
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 600px) {
+  .hooks-main {
+    display: none;
+  }
+}

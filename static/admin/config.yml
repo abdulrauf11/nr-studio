@@ -1,0 +1,64 @@
+backend:
+  name: git-gateway
+  branch: master
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - name: shop-item
+    label: Shop Item
+    folder: content/shop
+    create: true
+    slug: "{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Publish Date, name: date, widget: datetime }
+      - { label: Description, name: description, widget: string }
+      - { label: Price, name: price, widget: number }
+      - label: Size
+        name: size
+        widget: object
+        fields:
+          - { label: Width, name: width, widget: number }
+          - { label: Height, name: height, widget: number }
+      - label: Status
+        name: status
+        widget: select
+        options: [AVAILABLE, SOLD]
+        default: AVAILABLE
+      - label: Sale
+        name: sale
+        widget: number
+        default: 0
+      - label: Gallery
+        name: gallery
+        widget: list
+        field: { label: Image, name: image, widget: image }
+
+  - name: work-item
+    label: Work Item
+    folder: content/work
+    create: true
+    slug: "{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Publish Date, name: date, widget: datetime }
+      - { label: Description, name: description, widget: text }
+      - { label: Thumbnail, name: thumbnail, widget: image }
+      - label: Series
+        name: series
+        widget: list
+        fields:
+          - { label: Title, name: title, widget: string }
+          - label: Description
+            name: description
+            widget: text
+          - label: Gallery
+            name: gallery
+            widget: list
+            field: { label: Image, name: image, widget: image }
