@@ -15,19 +15,18 @@ description: >
   I apply intentional and unintentional brush strokes to make the painting look
   completely random. My paintings are not pre planned. They are spontaneous,
   done without giving them much thought. Spontaneity is a key process in my
-  work.   
-thumbnail: /img/petals.png
+  work.
+thumbnail: /img/Petals.jpg
 series:
-  - title: 'Series #1'
+  - title: "Series #1"
     description: Lorem Ipsum
     gallery:
-      - /img/floating.jpg
-      - /img/intentionally-unintentional.jpg
-      - /img/melting.jpg
-      - /img/fl1.jpg
-      - /img/fl2.jpg
-      - /img/fl3.jpg
-      - /img/fl4.jpg
-      - /img/5.jpg
+      - /img/Floating.jpg
+      - /img/Intentionally, Unintentional.jpg
+      - /img/Melting.jpg
+      - /img/Petals.jpg
+      - /img/Untitled 1.jpg
+      - /img/Untitled 2.jpg
+      - /img/Untitled 3.jpg
+      - /img/Untitled 4.jpg
 ---
-
