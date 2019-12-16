@@ -14,7 +14,6 @@ size:
 status: AVAILABLE
 sale: 30
 gallery:
-  - /img/lrm_export_237250320396719_20191016_221033265.jpeg
-  - /img/lrm_export_238462298715319_20191016_223045243.jpeg
+  - /img/BR.jpg
+  - /img/Break Free Detail.jpg
 ---
-

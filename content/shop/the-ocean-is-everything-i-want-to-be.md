@@ -14,7 +14,6 @@ size:
 status: AVAILABLE
 sale: 30
 gallery:
-  - /img/lrm_export_238626714784371_20191016_223329659.jpeg
-  - /img/lrm_export_238129048833467_20191016_222511993.jpeg
+  - /img/TE.jpg
+  - /img/The Ocean is Detail.jpg
 ---
-

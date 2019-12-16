@@ -1,5 +1,5 @@
 ---
-title: 'Awaken '
+title: "Awaken "
 date: 2019-10-22T14:03:24.058Z
 description: >-
   Original mixed media painting on canvas.  Inspired by the movement and
@@ -14,7 +14,6 @@ size:
 status: AVAILABLE
 sale: 30
 gallery:
-  - /img/lrm_export_239211027228367_20191016_224313972.jpeg
-  - /img/lrm_export_237719661673571_20191016_221822606.jpeg
+  - /img/AW.jpg
+  - /img/Awaken Detail.jpg
 ---
-
