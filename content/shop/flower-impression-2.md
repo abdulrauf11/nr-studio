@@ -10,7 +10,7 @@ price: 3500
 size:
   height: 30
   width: 22
-status: AVAILABLE
+status: SOLD
 sale: 0
 gallery:
   - /img/FL2.jpg
