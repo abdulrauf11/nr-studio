@@ -12,8 +12,9 @@ size:
   height: 20
   width: 25
 status: AVAILABLE
-sale: 30
+sale: 40
 gallery:
   - /img/TE.jpg
   - /img/The Ocean is Detail.jpg
 ---
+
