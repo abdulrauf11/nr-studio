@@ -11,7 +11,7 @@ size:
   height: 21
   width: 16
 status: AVAILABLE
-sale: 0
+sale: 10
 gallery:
   - /img/FL4.jpg
   - /img/FL4 Detail.jpg
