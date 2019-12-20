@@ -11,7 +11,7 @@ size:
   height: 20
   width: 16
 status: AVAILABLE
-sale: 0
+sale: 10
 gallery:
   - /img/FL5.jpg
   - /img/FL5 Detail.jpg
