@@ -10,7 +10,7 @@ size:
   height: 30
   width: 30
 status: AVAILABLE
-sale: 0
+sale: 20
 gallery:
   - /img/Epiphany.jpg
   - /img/Epiphany Detail.jpg
