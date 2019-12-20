@@ -12,7 +12,7 @@ size:
   height: 20
   width: 25
 status: AVAILABLE
-sale: 40
+sale: 50
 gallery:
   - /img/BR.jpg
   - /img/Break Free Detail.jpg
