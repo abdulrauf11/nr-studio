@@ -72,6 +72,7 @@ function Portfolio({ data }) {
           .cross {
             cursor: pointer;
             position: fixed;
+            z-index: 1000;
             right: 7.5%;
             transform: translateY(-50%);
             transition: all 0.5s ease-out;

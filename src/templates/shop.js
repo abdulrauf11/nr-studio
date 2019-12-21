@@ -42,13 +42,13 @@ const ShopPage = ({ data }) => {
             margin-top: 4rem;
             min-height: 100vh;
             display: grid;
-            grid-template-columns: 1fr 1fr;
             grid-gap: 5rem 5rem;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-auto-rows: 500px;
           }
 
           .grid-item {
             position: relative;
-            height: 25vmax;
           }
 
           .sale-tag {
@@ -81,21 +81,24 @@ const ShopPage = ({ data }) => {
             height: 100%;
           }
 
-          @media only screen and (max-width: 600px) {
+          @media only screen and (max-width: 500px) {
             .grid {
               grid-template-columns: 1fr;
+              grid-auto-rows: 400px;
             }
-            .grid-item {
-              flex: 1 1 100%;
-              height: 40vmax;
-            }
-
             .sale-tag {
               top: -15%;
             }
 
             .sale-tag .splash {
               width: 5rem;
+            }
+          }
+
+          @media only screen and (min-width: 2000px) {
+            .grid {
+              grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+              grid-auto-rows: 600px;
             }
           }
         `}

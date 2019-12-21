@@ -174,6 +174,9 @@ const Gallery = ({ gallery }) => {
           .series-gallery-wrapper {
             position: relative;
             transform: translateY(15vh);
+          }
+
+          .swiper-slide {
             height: 70vh;
           }
 
@@ -236,8 +239,11 @@ const Gallery = ({ gallery }) => {
 
           @media only screen and (max-width: 600px) {
             .series-gallery-wrapper {
-              height: 50vh;
               transform: translateY(15vh);
+            }
+
+            .swiper-slide {
+              height: 40vh;
             }
 
             .arrow-cursor {
