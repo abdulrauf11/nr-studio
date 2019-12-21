@@ -16,7 +16,7 @@ description: >
   completely random. My paintings are not pre planned. They are spontaneous,
   done without giving them much thought. Spontaneity is a key process in my
   work.
-thumbnail: /img/Petals.jpg
+thumbnail: /img/detail-4.jpg
 series:
   - title: 'Series #1'
     description: Lorem Ipsum
