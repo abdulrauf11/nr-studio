@@ -17,11 +17,11 @@ series:
       - /img/Silence.jpg
       - /img/Turbulent.jpg
       - /img/Tranquility.jpg
-      - /img/Sea To Sky 1.jpg
-      - /img/sea-to-sky-2.jpg
+      - /img/sts-1.jpg
+      - /img/sts-2.jpg
       - /img/refreshed.jpg
       - /img/The Ocean Is Calling.jpg
-      - /img/The Ocean Is Everything I Want To Be.jpg
+      - /img/ocean.jpg
       - /img/As Free As The Ocean.jpg
 ---
 
