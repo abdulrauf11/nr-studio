@@ -19,6 +19,7 @@ series:
       - /img/Tranquility.jpg
       - /img/Sea To Sky 1.jpg
       - /img/sea-to-sky-2.jpg
+      - /img/refreshed.jpg
       - /img/The Ocean Is Calling.jpg
       - /img/The Ocean Is Everything I Want To Be.jpg
       - /img/As Free As The Ocean.jpg
