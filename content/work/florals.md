@@ -18,15 +18,16 @@ description: >
   work.
 thumbnail: /img/Petals.jpg
 series:
-  - title: "Series #1"
+  - title: 'Series #1'
     description: Lorem Ipsum
     gallery:
       - /img/Floating.jpg
-      - /img/Intentionally, Unintentional.jpg
+      - '/img/Intentionally, Unintentional.jpg'
       - /img/Melting.jpg
-      - /img/Petals.jpg
       - /img/Untitled 1.jpg
       - /img/Untitled 2.jpg
       - /img/Untitled 3.jpg
       - /img/Untitled 4.jpg
+      - /img/Petals.jpg
 ---
+
