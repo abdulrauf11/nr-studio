@@ -17,11 +17,11 @@ series:
       - /img/Silence.jpg
       - /img/Turbulent.jpg
       - /img/Tranquility.jpg
-      - /img/sts-1.jpg
-      - /img/sts-2.jpg
+      - /img/sea-1.jpg
+      - /img/sea-2.jpg
       - /img/ref.jpg
       - /img/The Ocean Is Calling.jpg
-      - /img/ocean.jpg
+      - /img/ocean-1.jpg
       - /img/As Free As The Ocean.jpg
 ---
 
