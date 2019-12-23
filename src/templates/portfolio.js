@@ -24,15 +24,6 @@ function Portfolio({ data }) {
           <p className="description">{portfolio.description}</p>
         </div>
         <div className="series-wrapper">
-          {/* {portfolio.series.map((s, s_index) => (
-          <div className="series" key={s_index}>
-            <div className="series-text">
-              <h2 className="title">{s.title}</h2>
-              <p className="description">{s.description}</p>
-            </div>
-            <Gallery gallery={s.gallery} />
-          </div>
-        ))} */}
           {portfolio.series && (
             <div className="series">
               <Gallery gallery={portfolio.series[0].gallery} />
