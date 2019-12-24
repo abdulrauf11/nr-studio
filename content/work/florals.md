@@ -21,13 +21,21 @@ series:
   - title: "Series #1"
     description: Lorem Ipsum
     gallery:
-      - /img/temp.jpg
-      - /img/Floating.jpg
-      - "/img/Intentionally, Unintentional.jpg"
-      - /img/Melting.jpg
-      - /img/Untitled 1.jpg
-      - /img/Untitled 2.jpg
-      - /img/Untitled 3.jpg
-      - /img/Untitled 4.jpg
-      - /img/Petals.jpg
+      - /img/florals 1.jpg
+      - /img/florals 2.jpg
+      - /img/florals 3.jpg
+      - /img/florals 4.jpg
+      - /img/florals 5.jpg
+      - /img/florals 6.jpg
+      - /img/florals 7.jpg
+      - /img/florals 8.jpg
+      - /img/florals 9.jpg
+      - /img/florals 10.jpg
+      - /img/florals 11.jpg
+      - /img/florals 12.jpg
+      - /img/florals 13.jpg
+      - /img/florals 14.jpg
+      - /img/florals 15.jpg
+      - /img/florals 16.jpg
+      - /img/florals 17.jpg
 ---
