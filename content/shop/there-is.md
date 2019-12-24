@@ -1,6 +1,6 @@
 ---
 title: There is
-date: 2019-12-24T14:07:56.669Z
+date: 2019-12-24T14:09:56.669Z
 description: acrylic on paper
 price: 6500
 size:
@@ -10,5 +10,6 @@ status: AVAILABLE
 sale: 0
 gallery:
   - /img/there-is-beauty-in-dead-trees1.jpg
+  - /img/tibidt-1-frame.jpeg
 ---
 
