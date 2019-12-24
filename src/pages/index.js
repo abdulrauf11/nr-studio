@@ -45,13 +45,13 @@ export const fluidImage = graphql`
 
 export const pageQuery = graphql`
   query {
-    imageOne: file(relativePath: { eq: "hero/one.jpeg" }) {
+    imageOne: file(relativePath: { eq: "hero/one.jpg" }) {
       ...fluidImage
     }
-    imageTwo: file(relativePath: { eq: "hero/two.jpeg" }) {
+    imageTwo: file(relativePath: { eq: "hero/two.jpg" }) {
       ...fluidImage
     }
-    imageThree: file(relativePath: { eq: "hero/three.jpeg" }) {
+    imageThree: file(relativePath: { eq: "hero/three.jpg" }) {
       ...fluidImage
     }
   }

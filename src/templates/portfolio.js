@@ -105,7 +105,7 @@ function Portfolio({ data }) {
 
           @media only screen and (max-width: 600px) {
             .series-wrapper {
-              height: 80vh;
+              height: 90vh;
             }
             .text {
               margin: 0rem auto 0 auto;
