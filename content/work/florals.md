@@ -18,7 +18,7 @@ description: >
   work.
 thumbnail: /img/detail-4.jpg
 series:
-  - title: "Series #1"
+  - title: 'Series #1'
     description: Lorem Ipsum
     gallery:
       - /img/florals 1.jpg
@@ -30,12 +30,13 @@ series:
       - /img/florals 7.jpg
       - /img/florals 8.jpg
       - /img/florals 9.jpg
-      - /img/florals 10.jpg
       - /img/florals 11.jpg
       - /img/florals 12.jpg
-      - /img/florals 13.jpg
       - /img/florals 14.jpg
-      - /img/florals 15.jpg
       - /img/florals 16.jpg
       - /img/florals 17.jpg
+      - /img/florals 10.jpg
+      - /img/florals 13.jpg
+      - /img/florals 15.jpg
 ---
+
