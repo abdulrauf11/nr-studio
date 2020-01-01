@@ -9,11 +9,11 @@ description: >
    I don’t try to mimic reality in my paintings; I only express my raw emotions. For me, the smell of the sea, sound of the crashing waves and the depth of the sea is freeing and refreshing. I use texture in my paintings to evolve a sense of raw emotion. Dimensions and depths are produced by the formation of multiple layers. The use of heavy texture helps me to create a strong composition.
 thumbnail: /img/thumbnail.jpg
 series:
-  - title: "Series #1"
+  - title: 'Series #1'
     description: Lorem Ipsum
     gallery:
       - /img/sea 1.jpg
-      - /img/sea 2.jpg
+      - /img/Sea 2.jpg
       - /img/sea 3.jpg
       - /img/sea 4.jpg
       - /img/sea 5.jpg
@@ -24,3 +24,4 @@ series:
       - /img/sea 10.jpg
       - /img/sea 11.jpg
 ---
+
