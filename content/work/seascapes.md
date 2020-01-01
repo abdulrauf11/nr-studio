@@ -13,7 +13,7 @@ series:
     description: Lorem Ipsum
     gallery:
       - /img/sea 1.jpg
-      - /img/Sea 2.jpg
+      - /img/transition.jpg
       - /img/sea 3.jpg
       - /img/sea 4.jpg
       - /img/sea 5.jpg
