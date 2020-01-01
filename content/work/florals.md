@@ -32,11 +32,11 @@ series:
       - /img/florals 9.jpg
       - /img/florals 11.jpg
       - /img/florals 12.jpg
-      - /img/florals 14.jpg
       - /img/florals 16.jpg
       - /img/florals 17.jpg
       - /img/florals 10.jpg
       - /img/florals 13.jpg
       - /img/florals 15.jpg
+      - /img/florals 14.jpg
 ---
 
