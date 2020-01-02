@@ -1,17 +1,17 @@
 import React, { useState } from "react"
 import SEO from "../components/seo"
-import Image from "../components/image"
+import Img from "gatsby-image/withIEPolyfill"
 import FormOrder from "../components/formOrder"
 import { graphql, Link } from "gatsby"
 import { useTransition, animated, config } from "react-spring"
 
 const ProductPage = ({ data }) => {
-  const product = data.markdownRemark.frontmatter
+  const product = data.contentfulShopItem
 
   const [isFormOpen, setIsFormOpen] = useState(false)
 
   const [index, setIndex] = useState(0)
-  const transitions = useTransition(product.gallery[index], item => item, {
+  const transitions = useTransition(index, null, {
     from: { opacity: 0 },
     enter: { opacity: 1 },
     leave: { opacity: 0 },
@@ -32,7 +32,7 @@ const ProductPage = ({ data }) => {
     <>
       <SEO title="Shop" />
       <main className="main-shop">
-        <Link to="/">
+        <Link to="/shop">
           <div className="cross">
             <span className="bar" />
             <span className="bar" />
@@ -45,25 +45,33 @@ const ProductPage = ({ data }) => {
               setIndex(state => (state + 1) % product.gallery.length)
             }
           >
-            {transitions.map(({ item, props, key }) => (
-              <animated.div
-                key={key}
-                className="image-container"
-                style={{
-                  ...props,
-                }}
-              >
-                <Image src={item} />
-              </animated.div>
-            ))}
+            {transitions.map(({ item, key, props }) =>
+              item === 0 ? (
+                <animated.div
+                  key={key}
+                  className="image-container"
+                  style={props}
+                >
+                  <Img fluid={product.gallery[0].fluid} alt="Painting" />
+                </animated.div>
+              ) : (
+                <animated.div
+                  key={key}
+                  className="image-container"
+                  style={props}
+                >
+                  <Img fluid={product.gallery[1].fluid} alt="Painting" />
+                </animated.div>
+              )
+            )}
           </div>
           <div className="description">
             <div className="card">
               <div className="title">
-                <h3>{product.title}</h3>
+                <h3>{product.name}</h3>
               </div>
               <div className="text">
-                <p>{product.description}</p>
+                <p>{product.description.description}</p>
               </div>
 
               <div className="info">
@@ -75,8 +83,8 @@ const ProductPage = ({ data }) => {
                     <div>Price</div>
                   </div>
                   <div className="ans">
-                    <div>{product.size.width} cm</div>
-                    <div>{product.size.height} cm</div>
+                    <div>{product.width} cm</div>
+                    <div>{product.height} cm</div>
                     <div>
                       <span
                         className="original-price"
@@ -88,7 +96,7 @@ const ProductPage = ({ data }) => {
                       >
                         Rs. {product.price}
                       </span>
-                      {product.sale !== 0 && (
+                      {product.sale !== null && (
                         <span className="sale-price">
                           Rs.{" "}
                           {product.price - product.price * (product.sale / 100)}
@@ -113,7 +121,7 @@ const ProductPage = ({ data }) => {
             <animated.div key={key} style={props}>
               <FormOrder
                 order={{
-                  title: product.title,
+                  title: product.name,
                   price: product.sale
                     ? product.price - product.price * (product.sale / 100)
                     : product.price,
@@ -268,18 +276,19 @@ export default ProductPage
 
 export const queryProduct = graphql`
   query($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      frontmatter {
-        title
+    contentfulShopItem(slug: { eq: $slug }) {
+      name
+      description {
         description
-        price
-        size {
-          width
-          height
+      }
+      price
+      width
+      height
+      sale
+      gallery {
+        fluid(maxWidth: 1920) {
+          ...GatsbyContentfulFluid
         }
-        status
-        gallery
-        sale
       }
     }
   }

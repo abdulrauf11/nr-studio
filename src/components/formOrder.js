@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react"
 import { Formik, Field, Form, ErrorMessage } from "formik"
 import * as Yup from "yup"
-import Image from "./image"
+import Img from "gatsby-image/withIEPolyfill"
 import { useSpring, useChain, animated } from "react-spring"
 
 const OrderSchema = Yup.object().shape({
@@ -76,12 +76,17 @@ const FormOrder = ({ order, toggleFormOpen }) => {
                   <div className="price">Rs. {order.price}</div>
                 </div>
                 <div className="order-details-thumbnail">
-                  <Image src={order.thumbnail} />
+                  <Img fluid={order.thumbnail.fluid} alt="Painting" />
                 </div>
               </div>
               <div className="flex-container">
                 <div className="thumbnail">
-                  <Image src={order.thumbnail} />
+                  <Img
+                    fluid={order.thumbnail.fluid}
+                    alt="Painting"
+                    objectFit="contain"
+                    objectPosition="left"
+                  />
                 </div>
                 <div className="form-wrapper">
                   <Formik
@@ -209,8 +214,8 @@ const FormOrder = ({ order, toggleFormOpen }) => {
 
         .cross {
           position: absolute;
-          top: 1.5rem;
-          right: 1.2rem;
+          top: 2rem;
+          right: 1rem;
         }
 
         .card {
@@ -249,6 +254,7 @@ const FormOrder = ({ order, toggleFormOpen }) => {
         .thumbnail {
           flex: 1;
           margin: 2rem;
+          height: 50vh;
         }
 
         .form-wrapper {
@@ -292,11 +298,6 @@ const FormOrder = ({ order, toggleFormOpen }) => {
         }
 
         @media only screen and (max-width: 600px) {
-          .cross {
-            top: 0.8rem;
-            right: 0.5rem;
-          }
-
           .flex-container {
             flex-direction: column;
           }

@@ -3,7 +3,7 @@ import { graphql, Link } from "gatsby"
 import Gallery from "../components/gallery"
 
 function Portfolio({ data }) {
-  const portfolio = data.markdownRemark.frontmatter
+  const portfolio = data.contentfulWorkItem
   return (
     <>
       <header className="header">
@@ -21,12 +21,12 @@ function Portfolio({ data }) {
       <section className="portfolio">
         <div className="text">
           <h1 className="title">{portfolio.title}</h1>
-          <p className="description">{portfolio.description}</p>
+          <p className="description">{portfolio.description.description}</p>
         </div>
         <div className="series-wrapper">
-          {portfolio.series && (
+          {portfolio.gallery && (
             <div className="series">
-              <Gallery gallery={portfolio.series[0].gallery} />
+              <Gallery gallery={portfolio.gallery} />
             </div>
           )}
         </div>
@@ -125,14 +125,14 @@ export default Portfolio
 
 export const queryPortfolio = graphql`
   query($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      frontmatter {
-        title
+    contentfulWorkItem(slug: { eq: $slug }) {
+      title
+      description {
         description
-        series {
-          title
-          description
-          gallery
+      }
+      gallery {
+        fluid(maxWidth: 1920) {
+          ...GatsbyContentfulFluid
         }
       }
     }

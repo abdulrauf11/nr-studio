@@ -1,8 +1,8 @@
 import React, { useRef, useEffect } from "react"
 import Swiper from "swiper"
 import "../../node_modules/swiper/css/swiper.min.css"
-import Image from "./image"
 import { TweenMax, Power4 } from "gsap"
+import Img from "gatsby-image/withIEPolyfill"
 
 const Gallery = ({ gallery }) => {
   const swiperContainerRef = useRef(null)
@@ -161,7 +161,12 @@ const Gallery = ({ gallery }) => {
           <div className="swiper-wrapper">
             {gallery.map((imgSrc, index) => (
               <div key={index} className="swiper-slide">
-                <Image src={imgSrc} />
+                <Img
+                  fluid={imgSrc.fluid}
+                  alt="Portfolio Paintings"
+                  fadeIn={false}
+                  loading="eager"
+                />
               </div>
             ))}
           </div>

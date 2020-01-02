@@ -1,22 +1,21 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Image from "../components/image"
+import Img from "gatsby-image/withIEPolyfill"
 import { graphql, Link } from "gatsby"
 import sale from "../images/splash.svg"
 
 const ShopPage = ({ data }) => {
-  const shop = data.allMarkdownRemark.nodes.filter(
-    p => p.frontmatter.status !== "SOLD"
+  const shop = data.allContentfulShopItem.edges.filter(
+    ({ node }) => node.status
   )
   shop.sort((a, b) =>
-    a.frontmatter.date < b.frontmatter.date
+    a.node.updatedAt > b.node.updatedAt
       ? 1
-      : b.frontmatter.date < a.frontmatter.date
+      : b.node.updatedAt > a.node.updatedAt
       ? -1
       : 0
   )
-
   return (
     <Layout>
       <SEO title="Shop" />
@@ -24,16 +23,16 @@ const ShopPage = ({ data }) => {
         <h1 className="heading">shop</h1>
 
         <section className="grid">
-          {shop.map((item, index) => (
+          {shop.map(({ node }, index) => (
             <div key={index} className="grid-item">
-              {item.frontmatter.sale !== 0 && (
+              {node.sale !== null && (
                 <div className="sale-tag">
                   <img className="splash" src={sale} alt="Sale Tag" />
-                  <span className="amount">{item.frontmatter.sale}%</span>
+                  <span className="amount">{node.sale}%</span>
                 </div>
               )}
-              <Link to={item.fields.slug} className="link">
-                <Image src={item.frontmatter.gallery[0]} alt="shop item" />
+              <Link to={node.slug} className="link">
+                <Img fluid={node.gallery[0].fluid} alt="Shop Item" />
               </Link>
             </div>
           ))}
@@ -117,18 +116,19 @@ const ShopPage = ({ data }) => {
 export default ShopPage
 
 export const queryShop = graphql`
-  query($slug: String!) {
-    allMarkdownRemark(filter: { fields: { slug: { regex: $slug } } }) {
-      nodes {
-        fields {
+  query ShopQuery {
+    allContentfulShopItem {
+      edges {
+        node {
           slug
-        }
-        frontmatter {
-          title
-          gallery
-          date
           status
+          createdAt
           sale
+          gallery {
+            fluid(maxWidth: 1920) {
+              ...GatsbyContentfulFluid
+            }
+          }
         }
       }
     }

@@ -1,8 +1,8 @@
 import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import { useSpring, animated } from "react-spring"
-import Image from "./image"
 import range from "lodash-es/range"
+import Img from "gatsby-image/withIEPolyfill"
 
 const interp = i => r =>
   `translate3d(0, ${15 * Math.sin(r + (i * 2 * Math.PI) / 1.6)}px, 0)`
@@ -10,21 +10,22 @@ const interp = i => r =>
 function WorkSection() {
   const data = useStaticQuery(graphql`
     query WorkQuery {
-      allMarkdownRemark(filter: { fields: { slug: { regex: "/work/" } } }) {
-        nodes {
-          fields {
-            slug
-          }
-          frontmatter {
+      allContentfulWorkItem {
+        edges {
+          node {
             title
-            date
-            thumbnail
+            slug
+            thumbnail {
+              fluid(maxWidth: 800) {
+                ...GatsbyContentfulFluid
+              }
+            }
           }
         }
       }
     }
   `)
-  const allPortfolios = data.allMarkdownRemark.nodes
+  const allPortfolios = data.allContentfulWorkItem.edges
   const items = range(allPortfolios.length)
   const { radians } = useSpring({
     from: { radians: 0 },
@@ -51,14 +52,15 @@ function WorkSection() {
             >
               <div className="grid-item">
                 <Link
-                  to={allPortfolios[i].fields.slug}
+                  to={allPortfolios[i].node.slug}
                   style={{ display: "block", width: "100%", height: "100%" }}
                 >
-                  <Image src={allPortfolios[i].frontmatter.thumbnail} />
+                  <Img
+                    fluid={allPortfolios[i].node.thumbnail.fluid}
+                    alt="Portfolio Paintings"
+                  />
                 </Link>
-                <div className="title">
-                  {allPortfolios[i].frontmatter.title}
-                </div>
+                <div className="title">{allPortfolios[i].node.title}</div>
               </div>
             </animated.div>
           ))}
