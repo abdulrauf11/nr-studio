@@ -9,6 +9,13 @@ const ShopPage = ({ data }) => {
   const shop = data.allMarkdownRemark.nodes.filter(
     p => p.frontmatter.status !== "SOLD"
   )
+  shop.sort((a, b) =>
+    a.frontmatter.date < b.frontmatter.date
+      ? 1
+      : b.frontmatter.date < a.frontmatter.date
+      ? -1
+      : 0
+  )
 
   return (
     <Layout>
