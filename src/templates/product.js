@@ -83,8 +83,8 @@ const ProductPage = ({ data }) => {
                     <div>Price</div>
                   </div>
                   <div className="ans">
-                    <div>{product.width} cm</div>
-                    <div>{product.height} cm</div>
+                    <div>{product.width} in</div>
+                    <div>{product.height} in</div>
                     <div>
                       <span
                         className="original-price"
@@ -141,6 +141,7 @@ const ProductPage = ({ data }) => {
           }
 
           .cross {
+            z-index: 500;
             cursor: pointer;
             position: fixed;
             top: 10vh;
